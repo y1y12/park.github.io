@@ -1,0 +1,753 @@
+
+<!doctype html>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bistros - Restaurants Category Responsive Website Template - Home : W3Layouts</title> 
+    <script src="assets/js/echarts.js"></script>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+               
+                <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#maxtu">主题 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bf1">公园</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bf2">最美公园</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bf3">绿地</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#bf4">环境</a>
+                      </li>
+                        <!-- search button -->
+                        <div class="search-right">
+                            <form action="#search" method="GET" class="search-box position-relative">
+                                <div class="input-search">
+                                    <input type="search" placeholder="Enter Keyword" name="search" required="required"
+                                        autofocus="" class="search-popup">
+                                </div>
+                                <button type="submit" class="btn search-btn"><i class="fa fa-search"
+                                        aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!-- //search button -->
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- 最大的图 -->
+    <section  id="maxtu">
+      
+        <div style="height: 800;">
+           <div style="position: absolute;z-index: 1;top: 120px;left: 150px;">
+            <img src="assets/images/文字.png" alt="" style="height: 250px;width: 1200px;">
+            </div> 
+            <img style="position: relative; z-index: 0;" src="assets/images/封面.jpg" alt="product" height="800" width="1500px">
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- 第一部分 -->
+    <section id="bf1">
+        <div style="width: 1500px;background-image: url(assets/images/bj3.png); height:600px;padding: 25px;">
+            <p style="left: 1000px;position: absolute;font-size: 30px;color: #000;">中国各地区公园数量</p>
+           <div style="width: 600px;height: 500px; position: absolute;left:850px;padding: 60px;z-index: 1;"><p style="position: absolute;font-size: 30px;letter-spacing: 2px;line-height: 40px;color: #515151;">中国建设公园的历史，其实不过一百多年。国家统计局显示，到 2020 年，中国已经有<span style="color: brown;"> 19823</span> 个公园，公园面积达到<span style="color: brown;">53.85 万公顷</span> ，接近东南亚国家文莱的国土面积。
+                但中国这么多的公园并不是“雨露均沾”地分布在每一片土地上，地区之间存在着较大差异。
+                在中国各地中，拥有最多公园的省份是广东。广东人民凭借着依山傍水的天然优势，在 18 万平方公里的土地里建起了 <span style="color: brown;">4330</span> 个公园，平均每 42 平方公里可以找到一个公园。            </p></div> 
+       
+        <img  src="assets/images/5.png" alt="" height="400px" style="position: absolute;padding-left: 600px;z-index: 0;top: 990px;opacity: 50%;">
+        <div id="main" style="width: 650px;height:550px;left: 30px;"></div>
+        <script >
+          // 基于准备好的dom，初始化echarts实例
+          var myChart = echarts.init(document.getElementById('main'));
+          
+          // 指定图表的配置项和数据
+         var option = {
+       
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow',
+        }
+      },
+      legend: {
+        data: ['2020'],
+        left:300,
+        top:10
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '1%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01],
+       
+      },
+      yAxis: {
+        type: 'category',
+        data: ['北京', '天津', '河北', '山西', '内蒙古', '辽宁', '吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东','广西','海南','重庆','四川','贵州','云南','西藏','陕西','甘肃','青海','宁夏','新疆']
+      },
+
+      series: [
+        {
+            emphasis:{
+                 focus:'series'
+            },
+          name: '2020',
+          type: 'bar',
+          data: [360, 140, 779, 284, 340, 606, 377,422,386,1194,1547,588,716,714,1299,538,520,456,4330,346,128,514,786,256,948,155,366,203,64,112,349],
+          markLine:{
+               lineStyle:{
+                type:'dashed'
+               },
+               data:[{type:'average',name:'Avg'}]
+          },
+          markPoint:{
+            symbol:"circle",
+            symbolSize:10,
+            itemStyle:{
+              color:"#223042"
+            },  
+            data:[
+                {type:'max',name:'max'},
+                {type:'min',name:'min'}
+            ]
+          },
+          itemStyle:{
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              
+          { offset: 0, color: '#83bff6' },
+          { offset: 0.5, color: '#719bcd' },
+          { offset: 1, color: '#6a8bb3' }
+        ])
+          }
+        }
+      ]
+    };
+    
+    
+          // 使用刚指定的配置项和数据显示图表。
+          myChart.setOption(option);
+          window.onresize=function(){
+            myChart.resize();
+          }
+        </script>
+     </div>   
+    </section>
+
+    <!-- //about section -->
+
+    <!-- 第二部分 -->
+        <section id="bf2" style="z-index: 20;background-image: url(assets/images/bj4.png);height: 720px;width: 1500px;" >
+            <div id="t1" style="float: left; opacity: 40%; position: relative;left: 1100px;z-index: 10;top: 600px;"  >
+                <img src="assets/images/资源 2.png" height="110" width="300">
+            </div> 
+            <div id="t2" style="float: left; opacity: 40%; position: relative;left: -287px;z-index: 10;top: 216px;"  >
+                <img src="assets/images/资源 1.png" height="500" width="500">
+            </div> 
+            <p style="left: 200px;position: absolute;font-size: 30px;color: #000;padding-top: 25px;">中国十个最大的城市公园</p>
+           <div style="width:750px;height: 500px; position: absolute;padding: 60px;z-index: 1;"><p style="position: absolute;font-size:16px;letter-spacing: 3px;line-height: 25px;color: #515151;left: 26px;text-align: center;padding-top: 15px;">城市公园作为城市建设的重要组成部分，它好处有很多，比如提供游憩、进行<br>文化知识科普优化城市环境净化空气等等。那么你知道 <span style="color: brown;">中国十大城市公园</span>有哪些吗？<br>第一：<span style="color: brown;">东湖公园</span>以其独特的山水风光享誉国内外，这里湖岸曲折，碧波万顷，青山环绕，山林林木葱郁<br>湖水镜映，山体如屏，山色如画，被《中国国家地理》评为湖北省“最美观景拍摄点”<br>第二：<span style="color: brown;">惠州西湖公园</span>有“苎萝西子”之美誉，并有“大中国西湖三十六，唯惠州足并杭州”的史载<br>第三：<span style="color: brown;">玄武湖公园</span>樱洲千株樱花盛开，十分好看！夏季，园内近500亩荷花绽放，成为国内赏荷花胜地<br>第四：<span style="color: brown;">香山公园</span>是一座具有山林特色的皇家园林公园，以香山红叶驰名中外，被评为“新北京十六景”之一。<br>第五：<span style="color: brown;">颐和园</span>以其秀丽的湖光山色、典雅的园林艺术，被评为首批“国家重点公园”。<br>第六：<span style="color: brown;">瘦西湖</span>风光秀丽，风韵独具而蜚声海内外，为“国家重点公园”,也是中国最美的十大城市公园之一<br>第七：<span style="color: brown;">大明湖公园</span>与趵突泉、千佛山并称为济南三大名胜，体现出济南“四面荷花三面柳，一城山色半城湖”<br>的特色景观<br>第八：<span style="color: brown;">北海公园</span>以其秀丽的湖光山色和古典的皇家园林而闻名世界，是北京风景最优美的前“三海”之首，<br>为首批“国家重点公园<br>第九：<span style="color: brown;">趵突泉公园</span>是泉城济南的象征与标志，被誉为“天下第一泉”，为国家重点公园”<br>第十：<span style="color: brown;">蠡园公园</span>地处风光秀美的蠡湖之滨，以独具风格的水景园林而独步于江南，为国家重点公园<br>也是中国最美的十大城市公园",           </p></div> 
+            <div id="main1" style="z-index: 20; width: 1400px;height:700px;"></div>
+            
+            <script >
+              // 基于准备好的dom，初始化echarts实例
+              var myChart = echarts.init(document.getElementById('main1'),'main1');
+        
+              // 指定图表的配置项和数据
+              var option = {
+               tooltip:{
+            trigger:'item',
+            formatter:"{a} \n{b} : {c} ({d}%)"
+          },
+          legend: {
+            top: '550',
+            left:850,
+            textStyle:{
+                color:"#926c6c"
+
+            }
+          },
+         
+          color:['salmon','beige','turquoise','yellow','khaki','lime','pink','Lavender','orchid','orange'],
+          series: [
+            {
+              name: 'name',
+              type: 'pie',
+              radius: [30, 200],
+              center: ['80%', '40%'],
+              roseType: 'area',
+              itemStyle: {
+                borderRadius: 0,
+              },
+              markline:{
+                data:[{
+                  type:'average'
+                }]
+              },
+              label:{
+                show:true,
+                color:'#926c6c',
+                fontweight:'blod',
+                formatter:'{b}  占比: {d}',
+                left:100
+              },
+              
+              data: [
+                { value: 30, name: '颐和园\n309公顷' },
+                { value: 60, name: '武汉东湖公园\n8800公顷' },
+                { value: 28, name: '瘦西湖公园\n100公顷' },
+                { value: 35, name: '玄武湖公园\n502公顷' },
+                { value: 25, name: '大明湖公园\n81公顷' },
+                { value: 23, name: '北京北海公园\n68.2公顷' },
+                { value: 31, name: '北京香山公园\n160公顷' },
+                { value: 50, name: '惠州西湖公园\n2091公顷' },
+                { value: 15, name: '蠡园公园\n5.2公顷' },
+                { value: 17, name: '趵突泉公园\n10.5公顷' }
+              ]
+            }
+          ]
+        };
+          // 使用刚指定的配置项和数据显示图表。
+             myChart.setOption(option);
+              window.onresize=function(){
+                myChart.resize();
+              }
+            </script>
+        </section> 
+    <!-- //dishes section -->
+
+    <!-- 第三部分 -->
+        <section id="bf3" class="w3-bottom-stats py-5" style="background-image: url(assets/images/bj2.png);height: 660px;width: 1500px;">
+            <div id="t1" style="float: left; opacity: 50%; position:absolute;left: 1230px; z-index: 10;top: 2555px;"  >
+                <img src="assets/images/3.png" height="250" width="260">
+            </div> 
+            <div id="t1" style="float: left; opacity: 0.5; position: relative;left: 1100px;z-index: 10;top: 70px;"  >
+                <img src="assets/images/资源 6.png" height="110" width="300">
+            </div> 
+            <div  style="float:left; opacity: 0.5; position: relative; left:1000px;z-index:10;top: 15px;"  >
+                <img src="assets/images/资源 6.png" height="50" width="100" >
+            </div> 
+            <div id="t2" style="float: left; opacity: 0.5; position: relative;left: -350px;z-index: 10;top:-30px;"  >
+                <img src="assets/images/资源 6.png" height="110" width="320">
+            </div> 
+            <div id="t3" style="float: left; opacity: 1; position: relative;left: -150px;">
+                <h1>各类型公园的绿地数量</h1>
+             </div>
+             <div id="t4" style="float: left;  position: relative;left: -680px; width: 450px;height:700px;top: 70px;">
+                <p >  “公园绿地”是城市中向公众开放的、以游憩为主要功能，有一定的游憩设施和服务设施，同时兼有生态维护、环境美化、减灾避难等综合作用的绿化用地。是城市建设用地、城市绿地系统和城市市政公用设施的重要组成部分，是展示城市整体环境水平和居民生活质量的一项重要指标。其规模可大可小。</p>
+             <p>  公园绿地在未来的开发将变得巨大，随着科学技术的发展，人类对于生活有着新的认识，空气的清新是对健康的巨大保障，公园绿地的规模极大的影响人们的生活，健康，乃至心情，而科学技术的飞速发展促使人们有能力在保障物质生活的同时追求更好的生活。
+                公园绿地在未来是一个很好的投资目标，开发商为了适应顾客的口味，开发公园绿地有利于人们生活的的进步，让人们的生活健康和谐。</p>
+                <p>  公园绿地可有效吸收二氧化碳等气体，缓解城市热岛效应。公园绿地的形成有利于清新空气，让超负荷压力下生存的上班族有了放松的清洁场所，容易舒缓身心，缓解疲劳。
+                </p>
+            </div>
+            <div id="t5" style="float: left;  position: relative;left: 1050px; width: 400px;height:400px;top: -540px; ">
+                <p >  评估对象为33个城市内各类公园绿地，包括综合公园、社区公园、游园及其他公园，不包含水面;33个城市共涉及到43898个公园绿地。</p>
+                <p>  33个城市包含直辖市4个:北京，上海，天津，重庆;省会城市24个:广州，西安，乌鲁木齐，合肥，呼和浩特，贵阳，西宁，武汉，南宁，济南，哈尔滨，银川，兰州，沈阳，昆明，海口，长春，南昌，石家庄，南京，杭州，长沙，郑州，太原;计划单列城市5个:宁波，大连，青岛，厦门，深圳。</p>
+            <p>
+                <br>
+                公园绿地数据全部来自公开电子地图数据</p>
+            </div>
+            <div id="main2" style="z-index: 20; height:650px;top: -20px;"></div>
+            
+            <script >
+              // 基于准备好的dom，初始化echarts实例
+              var myChart = echarts.init(document.getElementById('main2'),'main2');
+        
+              // 指定图表的配置项和数据
+              var option = {
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        top: '89%',
+        left: 'center'
+      },
+     
+      series: [
+        {
+          name: '绿地数量(个)',
+          type: 'pie',
+          radius: ['35%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            scale: true,
+            label: {
+              show: true,
+              fontSize: '30',
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+            { value: 1998, name: '综合公园' },
+            { value: 16371, name: '社区公园' },
+            { value: 25529, name: '游园' },
+           
+          ]
+        }
+      ]
+    };
+          // 使用刚指定的配置项和数据显示图表。
+             myChart.setOption(option);
+              window.onresize=function(){
+                myChart.resize();
+              }
+            </script>
+                         
+        </section> 
+    <!-- //grids section -->
+
+    <!-- 第四部分 -->
+    <section id="bf4" style="background-image: url(assets/images/bj1.png);height: 600px;width: 1500px;">
+      <div id="container1" style="height: 600px;width: 600px;float: right;top: 2770px;position: absolute;left:-30px;"></div>
+      <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+      <script >
+         var dom = document.getElementById('container1');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+        
+        var option;
+    
+        const gaugeData = [
+      {
+        value:65.36,
+        name: '2016',
+        title: {
+          offsetCenter: ['0%', '-70%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '-60%']
+        }
+      },
+      {
+        value: 68.84,
+        name: '2017',
+        title: {
+          offsetCenter: ['0%', '-40%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '-30%']
+        }
+      },
+      {
+        value: 72.37,
+        name: '2018',
+        title: {
+          offsetCenter: ['0%', '-10%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '0%']
+        }
+      },
+       {
+        value: 75.64,
+        name: '2019',
+        title: {
+          offsetCenter: ['0%', '20%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '30%']
+        }
+      },
+       {
+        value: 79.79,
+        name: '2020',
+        title: {
+          offsetCenter: ['0%', '50%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '60%']
+        }
+      },
+    ];
+    option = {
+      
+      title:{
+        text:"2016-2020年城市公园绿地面积",
+        left:"150px",
+        top:"550px",
+        textStyle: {
+      fontSize: 20,
+      color: "rgba(128, 126, 126, 1)"
+    },
+      },
+      series: [
+        {
+          type: 'gauge',
+          startAngle:90,
+          endAngle: -270,
+          pointer: {
+            show: false
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            roundCap: true,
+            clip: false,
+            itemStyle: {
+              borderWidth: 1,
+              borderColor: '#464646'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              width: 50
+            }
+          },
+          splitLine: {
+            show: false,
+            distance: 0,
+            length: 10
+          },
+          axisTick: {
+            show: false
+          },
+          axisLabel: {
+            show: false,
+            distance: 50
+          },
+          data: gaugeData,
+          title: {
+            fontSize: 14
+          },
+          detail: {
+            width: 70,
+            height: 16,
+            fontSize: 14,
+            color: 'auto',
+            borderColor: 'auto',
+            borderRadius: 20,
+            borderWidth: 1,
+            formatter: '{value}万公顷'
+          },
+        }
+      ]
+    };
+        if (option && typeof option === 'object') {
+          myChart.setOption(option);
+        }
+        myChart.setOption(option);
+        window.onresize=function(){
+          myChart.resize();
+        }
+        window.addEventListener('resize', myChart.resize);
+      </script>
+      <div id="container" style="height: 600px;width:95%; float: right;position: absolute;"></div>
+      <script>
+        var myChart = echarts.init(document.getElementById('container'));
+        var app = {};
+        
+        var option;
+    
+        const treeDataURI =
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAA2CAYAAADUOvnEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5tJREFUeNrcWE1oE0EUnp0kbWyUpCiNYEpCFSpIMdpLRTD15s2ePHixnj00N4/GoyfTg2fbiwdvvagHC1UQ66GQUIQKKgn1UAqSSFua38b3prPJZDs7s5ufKn0w7CaZ2W/fe9/73kyMRqNB3Nrj1zdn4RJ6du9T2u1a2iHYSxjP4d41oOHGQwAIwSUHIyh8/RA8XeiXh0kLGFoaXiTecw/hoTG4ZCSAaFkY0+BpsZceLtiAoV2FkepZSDk5EpppczBvpuuQCqx0YnkYcVVoqQYMyeCG+lFdaGkXeVOFNu4aEBalOBk6sbQrQF7gSdK5JXjuHXuYVIVyr0TZ0FjKDeCs6km7JYMUdrWAUVmZUBtmRnVPK+x6nIR2xomH06R35ggwJPeofWphr/W5UjPIxq8B2bKgE8C4HVHWvg+2gZjXj19PkdFztY7bk9TDCH/g6oafDPpaoMvZIRI5WyMB/0Hv++HkpTKE0kM+A+h20cPAfN4GuRyp9G+LMTW+z8rCLI8b46XO9zRcYZTde/j0AZm8WGb3Y2F9KLlE2nqYkjFLJAsDOl/lea0q55mqxXcL7YBc++bsCPMe8mUyU2ZIpnCoblca6TZA/ga2Co8PGg7UGUlEDd0ueptglbrRZLLE7poti6pCaWUo2pu1oaYI1CF9b9cCZPO3F8ikJQ/rPpQT5YETht26ss+uCIL2Y8vHwJGpA96GI5mjOlaKhowUy6BcNcgIhDviTGWCGFaqEuufWz4pgcbCh+w0gEOyOjTlTtYYlIWPYWKEsLDzOs+nhzaO1KEpd+MXpOoTUgKiNyhdy5aSMPNVqxtSsJFgza5EWA4zKtCJ2OGbLn0JSLu8+SL4G86p1Fpr7ABXdGFF/UTD4rfmFYFw4G9VAJ9SM3aF8l3yok4/J6IV9sDVb36ynmtJ2M5+CwxTYBdKNMBaocKGV2nYgkz6r+cHBP30MzAfi4Sy+BebSoPIOi8PW1PpCCvr/KOD4k9Zu0WSH0Y0+SxJ2awp/nlwKtcGyHOJ8vNHtRJzhPlsHr8MogtlVtwUU0tSM1x58upSKbfJnSKUR07GVMKkDNfXpzpv0RTHy3nZMVx5IOWdZIaPabGFvfpwpjnvfmJHXLaEvZUTseu/TeLc+xgAPhEAb/PbjO6PBaOTf6LQRh/dERde23zxLtOXbaKNhfq2L/1fAOPHDUhOpIf5485h7l+GNHHiSYPKE3Myz9sFxoJuAyazvwIMAItferha5LTqAAAAAElFTkSuQmCC';
+    const beginYear = 2015;
+    const endYear = 2020;
+    const lineCount = 19;
+    // Basic option:
+    option = {
+      color: ['#e54035'],
+      xAxis: {
+        axisLine: { show: false },
+        axisLabel: { show: false },
+        axisTick: { show: false },
+        splitLine: { show: false },
+        name: beginYear + '',
+        nameLocation: 'middle',
+        nameGap: 40,
+        nameTextStyle: {
+          color: 'green',
+          fontSize: 30,
+          fontFamily: 'Arial'
+        },
+        min: -2800,
+        max: 2800
+      },
+      yAxis: {
+        data: makeCategoryData(),
+        show: false
+      },
+      grid: {
+        top: 'center',
+        height: 400
+      },
+      series: [
+        {
+          name: 'all',
+          type: 'pictorialBar',
+          symbol: 'image://' + treeDataURI,
+          symbolSize: [30, 55],
+          symbolRepeat: true,
+          data: makeSeriesData(beginYear),
+          animationEasing: 'elasticOut'
+        },
+        {
+          name: 'all',
+          type: 'pictorialBar',
+          symbol: 'image://' + treeDataURI,
+          symbolSize: [30, 55],
+          symbolRepeat: true,
+          data: makeSeriesData(beginYear, true),
+          animationEasing: 'elasticOut'
+        }
+      ]
+    };
+    // Make fake data.
+    function makeCategoryData() {
+      var categoryData = [];
+      for (var i = 0; i < lineCount; i++) {
+        categoryData.push(i + 'a');
+      }
+      return categoryData;
+    }
+    function makeSeriesData(year, negative) {
+      // make a fake value just for demo.
+      const r = (year - beginYear ) * 10;
+      const seriesData = [];
+      for (let i = 0; i < lineCount; i++) {
+        let sign = negative ? -1 * (i % 3 ? 0.9 : 1) : 1 * ((i + 1) % 3 ? 0.9 : 1);
+        seriesData.push({
+          value:
+            sign *
+            (year <= beginYear 
+              ? Math.abs(i - lineCount / 2 + 0.5) < lineCount / 5
+                ? 5
+                : 0
+              : (lineCount - Math.abs(i - lineCount / 2 + 0.5)) * r),
+          symbolOffset: i % 2 ? ['50%', 0] : undefined
+        });
+      }
+      return seriesData;
+    }
+    // Set dynamic data.
+    var currentYear = beginYear;
+    setInterval(function () {
+      currentYear++;
+      if (currentYear > endYear) {
+        currentYear = beginYear;
+      }
+      myChart.setOption({
+        xAxis: {
+          name: currentYear
+        },
+        series: [
+          {
+            data: makeSeriesData(currentYear)
+          },
+          {
+            data: makeSeriesData(currentYear, true)
+          }
+        ]
+      });
+    }, 800);
+    
+        if (option && typeof option === 'object') {
+          myChart.setOption(option);
+        }
+        myChart.setOption(option);
+              window.onresize=function(){
+                myChart.resize();
+              }
+        window.addEventListener('resize', myChart.resize);
+      </script>
+      <div style="height: 400px;width: 550px;left: 900px;float: right;font-size: 24px;line-height: 40px;position: absolute;top: 2860px;">
+        <h3 style="top: -50px;position: absolute;font-size: 30px;left: 20px;">人与自然和谐共处</h3>
+        2016至2020全国城市建成区绿化覆盖率由40.3%提高到42.1%，城市公园绿地面积由65.36万公顷提升到79.79万公顷，城乡人居环境明显改善。中华大地上的绿色越来越多，城乡环境越来越美。<br>2020年，全国337个地级及以上城市中，202个城市空气质量达标，同比增加45个。全国地级及以上城市PM2.5年均浓度为33微克/立方米，同比下降8.3%；空气质量优良天数比率达到87%。
+        人们普遍感受到身边的环境美了，空气好了。前些年还常听到的空气质量指数“爆表”这个词儿，似乎也已经好久没再出现，蓝天白云的好天气正在成为常态。
+        <img src="assets/images/2.png" alt="" height="100px" style="top: 420px; position: absolute;opacity:80%;right: 20px;">
+        <img src="assets/images/2.png" alt="" height="100px" style="top: 420px; position: absolute;opacity:80%;right: 150px;">
+        <img src="assets/images/2.png" alt="" height="100px" style="top: 420px; position: absolute;opacity:80%;right: 280px;">
+        <img src="assets/images/2.png" alt="" height="100px" style="top: 420px; position: absolute;opacity:80%;right: 430px;">
+      </div>
+      
+    </section>
+    <!-- //stats section -->
+
+    
+    <!-- Js scripts -->
+    <!-- move top -->
+   
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- counter for stats -->
+    <script src="assets/js/counter.js"></script>
+    <!-- //counter for stats -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+   
+    
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the 
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.   
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>
